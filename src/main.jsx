@@ -5,11 +5,13 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   { 
     path: "/", 
-    element: <App /> //in diesem element wird die homepage direkt geladen --> 
+    element: <App />, //in diesem element wird die homepage direkt geladen -->
+    errorElement: <ErrorPage/> 
   },
   {
     path: "homepage",
