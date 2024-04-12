@@ -8,10 +8,10 @@ import Shop from "./Shop/Shop";
 import ErrorPage from "./ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
-  { 
-    path: "/", 
+  {
+    path: "/",
     element: <App />, //in diesem element wird die homepage direkt geladen -->
-    errorElement: <ErrorPage/> 
+    errorElement: <ErrorPage />,
   },
   {
     path: "homepage",

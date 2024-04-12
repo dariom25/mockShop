@@ -10,7 +10,7 @@ describe("Homepage component", () => {
     );
   });
   it("renders homepage according to snapshot", () => {
-    const { homepage} = render(<Homepage/>);
+    const { homepage } = render(<Homepage />);
     expect(homepage).toMatchSnapshot();
-  })
+  });
 });
