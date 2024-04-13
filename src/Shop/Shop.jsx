@@ -31,7 +31,6 @@ const Shop = () => {
   if (loading) return <p className="loading">Loading...</p>;
 
   const productList = productInformation.map((product) => {
-    console.log(typeof product.title);
     return (
       <Product
         title={product.title}
