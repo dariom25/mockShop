@@ -25,6 +25,7 @@ const useProductInformation = () => {
 
 const Shop = () => {
   const {productInformation, error, loading} = useProductInformation();
+  const {title, id, description, image, price} = productInformation
   
   if (error) return <p className="error">A network error has occurred!</p>
   if (loading) return <p className="loading">Loading...</p>
