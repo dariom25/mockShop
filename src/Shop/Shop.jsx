@@ -1,5 +1,6 @@
 import "./Shop.css";
 import { useEffect, useState } from "react";
+import Product from "../Product/Product.jsx";
 
 const useProductInformation = () => {
   const [productInformation, setProductInformation] = useState(null);
@@ -25,12 +26,24 @@ const useProductInformation = () => {
 
 const Shop = () => {
   const { productInformation, error, loading } = useProductInformation();
-  const { title, id, description, image, price } = productInformation;
 
   if (error) return <p className="error">A network error has occurred!</p>;
   if (loading) return <p className="loading">Loading...</p>;
 
-  return <p>Here will be a shopping page in the future</p>;
+  const productList = productInformation.map((product) => {
+    console.log(typeof product.title);
+    return (
+      <Product
+        title={product.title}
+        image={product.image}
+        price={product.price}
+        key={product.id}
+        description={product.description}
+      />
+    );
+  });
+
+  return <div className="product-list-container">{productList}</div>;
 };
 
 export default Shop;
