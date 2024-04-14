@@ -14,3 +14,39 @@
 .product-container>img{
     width: 200px;
 }
+
+.add-to-cart-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.add-to-cart-container>button{
+    background-color: transparent;
+    border-color: lightgray lightgray lightgray transparent;
+    border-style: solid;
+    border-width: 3px 3px 3px 0px;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.quantity-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity-container>input{
+    background-color: transparent;
+    border-color: lightgray lightgray lightgray lightgray;
+    border-style: solid;
+    border-width: 3px 0px 3px 3px;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 16px;
+    padding: 3px;
+
+}
+
+.quantity-container>input:hover, .quantity-container>input:focus, .add-to-cart-container>button:hover, .add-to-cart-container>button:focus{
+    background-color: aquamarine;
+}
