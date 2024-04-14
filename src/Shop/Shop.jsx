@@ -27,8 +27,8 @@ const useProductInformation = () => {
 const Shop = () => {
   const { productInformation, error, loading } = useProductInformation();
 
-  if (error) return <p className="error">A network error has occurred!</p>;
-  if (loading) return <p className="loading">Loading...</p>;
+  if (error) return <p className="error"><strong>A network error has occurred!</strong></p>;
+  if (loading) return <p className="loading"><strong>Loading...</strong></p>;
 
   const productList = productInformation.map((product) => {
     return (
