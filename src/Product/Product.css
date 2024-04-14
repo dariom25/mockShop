@@ -34,6 +34,7 @@
 .quantity-container{
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
 .quantity-container>input{
@@ -47,7 +48,7 @@
 
 }
 
-.quantity-container>input:hover, .quantity-container>input:focus, .add-to-cart-container>button:hover, .add-to-cart-container>button:focus{
+.quantity-container>input:focus, .add-to-cart-container>button:hover, .add-to-cart-container>button:focus{
     background-color: aquamarine;
     outline: none;
 }
