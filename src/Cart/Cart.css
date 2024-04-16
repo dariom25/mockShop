@@ -1,0 +1,24 @@
+.cart-container{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.cart-container:hover{
+    background-color: rgb(180, 179, 179);
+}
+
+.cart-container:active{
+    background-color: rgb(167, 166, 166);
+
+}
+
+.cart-container>svg{
+    font-size: 30px;
+}
+
+.cart-container>p{
+    font-size: 20px;
+}
