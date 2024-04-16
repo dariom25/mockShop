@@ -49,7 +49,7 @@ const Shop = () => {
   if (error)
     return (
       <p className="error">
-        <strong>A network error has occurred! Please again later.</strong>
+        <strong>A network error has occurred! Please try again later.</strong>
       </p>
     );
   if (loading)
@@ -58,8 +58,6 @@ const Shop = () => {
         <strong>Loading...</strong>
       </p>
     );
-
-  console.log(cart);
 
   const productList = productInformation.map((product) => {
     return (
