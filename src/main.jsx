@@ -6,11 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import Navbar from "./Navbar/Navbar";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, //in diesem element wird die homepage direkt geladen -->
+    element: <Navbar />,
     errorElement: <ErrorPage />,
   },
   {
