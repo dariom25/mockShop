@@ -1,11 +1,11 @@
 import { TiShoppingCart } from "react-icons/ti";
+import "./Cart.css";
 
-const Cart = (numberOfItems=5, sum=68) => {
+const Cart = ({sum = 0 }) => {
   return (
     <div className="cart-container">
       <TiShoppingCart />
-      <p className="no-of-items">{numberOfItems}</p>
-      <p className="sum">{sum}€</p>
+      <p>{sum} €</p>
     </div>
   );
 };
