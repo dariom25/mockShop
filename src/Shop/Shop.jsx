@@ -25,10 +25,41 @@ const useProductInformation = () => {
 };
 
 const Shop = () => {
+  const [cart, setCart] = useState(null);
+
   const { productInformation, error, loading } = useProductInformation();
 
-  if (error) return <p className="error"><strong>A network error has occurred!</strong></p>;
-  if (loading) return <p className="loading"><strong>Loading...</strong></p>;
+  useEffect(() => {
+    if (productInformation) {
+      const updatedProducts = productInformation.map((item) => {
+        return { ...item, quantity: 0 };
+      });
+      setCart(updatedProducts)
+    }
+  }, []);
+
+  const updateCart = (id, amount) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) => {
+        return item.id === id ? { ...item, quantity: amount } : item;
+      });
+    });
+  };
+
+  if (error)
+    return (
+      <p className="error">
+        <strong>A network error has occurred! Please again later.</strong>
+      </p>
+    );
+  if (loading)
+    return (
+      <p className="loading">
+        <strong>Loading...</strong>
+      </p>
+    );
+
+  console.log(cart);
 
   const productList = productInformation.map((product) => {
     return (
