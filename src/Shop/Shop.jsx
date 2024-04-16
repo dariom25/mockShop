@@ -67,6 +67,8 @@ const Shop = () => {
         price={product.price}
         key={product.id}
         description={product.description}
+        quantity={product.quantity}
+        addHandler={updateCart}
       />
     );
   });
