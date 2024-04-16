@@ -31,7 +31,7 @@ const Product = ({
             type="number"
             name="quantity"
             id="quantity"
-            onChange={(event) => setAmount(event.target.value)}
+            onChange={(event) => setAmount(parseInt(event.target.value))}
           />
         </div>
         <button onClick={handleUpdateCart} className="add-button">
