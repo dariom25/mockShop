@@ -1,10 +1,12 @@
 import App from "./App/App";
+import ErrorPage from "./ErrorPage/ErrorPage";
+import Navbar from "./Navbar/Navbar"
 
 const routes = [
   {
     path: "/",
-    element: <App />,
-    // hier fehlt noch ein error element
+    element: <Navbar />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "",
