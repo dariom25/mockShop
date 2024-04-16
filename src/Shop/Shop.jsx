@@ -25,7 +25,7 @@ const useProductInformation = () => {
 };
 
 const Shop = () => {
-  const [cart, setCart] = useState(null);
+  const [cart, setCart] = useState([]);
 
   const { productInformation, error, loading } = useProductInformation();
 
@@ -34,15 +34,16 @@ const Shop = () => {
       const updatedProducts = productInformation.map((item) => {
         return { ...item, quantity: 0 };
       });
-      setCart(updatedProducts)
+      setCart(updatedProducts);
     }
-  }, []);
+  }, [productInformation]); //check if sth changes when pages are switched
 
   const updateCart = (id, amount) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        return item.id === id ? { ...item, quantity: amount } : item;
+        return item.id === id ? { ...item, quantity: item.quantity + amount } : item;
       });
+      return updatedCart;
     });
   };
 
@@ -66,9 +67,10 @@ const Shop = () => {
         image={product.image}
         price={product.price}
         key={product.id}
+        id={product.id}
         description={product.description}
         updateCart={updateCart}
-      />
+      />      
     );
   });
 
