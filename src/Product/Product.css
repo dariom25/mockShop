@@ -48,7 +48,10 @@
 
 }
 
-.quantity-container>input:focus, .add-to-cart-container>button:hover, .add-to-cart-container>button:focus{
-    background-color: aquamarine;
+.quantity-container>input:focus, .add-to-cart-container>button:hover{
     outline: none;
+}
+
+.add-to-cart-container>button:active{
+    background-color: rgb(241, 231, 231);
 }
