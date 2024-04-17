@@ -4,6 +4,7 @@
     align-items: center;
     cursor: pointer;
     background-color: lightgray;
+    justify-content: space-around;
 }
 
 .cart-container:hover{
