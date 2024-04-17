@@ -29,6 +29,14 @@ const Shop = () => {
 
   const { productInformation, error, loading } = useProductInformation();
 
+  const sumOfCart = () => {
+    let sum = 0;
+    cart.forEach((item) => {
+      sum += item.quantity * item.price;
+    });
+    return Number(sum.toFixed(2));
+  };
+
   useEffect(() => {
     if (productInformation) {
       const updatedProducts = productInformation.map((item) => {
@@ -41,7 +49,9 @@ const Shop = () => {
   const updateCart = (id, amount) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        return item.id === id ? { ...item, quantity: item.quantity + amount } : item;
+        return item.id === id
+          ? { ...item, quantity: item.quantity + amount }
+          : item;
       });
       return updatedCart;
     });
@@ -70,11 +80,16 @@ const Shop = () => {
         id={product.id}
         description={product.description}
         updateCart={updateCart}
-      />      
+      />
     );
   });
 
-  return <div className="product-list-container">{productList}</div>;
+  return (
+    <div className="product-list-container">
+      {productList}
+      {console.log(cart)}
+    </div>
+  );
 };
 
 export default Shop;
