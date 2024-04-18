@@ -6,29 +6,21 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
 import ErrorPage from "./ErrorPage/ErrorPage";
-import Navbar from "./Navbar/Navbar";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: "homepage",
-        element: <Homepage />,
-      },
-      {
-        path: "shop",
-        element: <Shop />,
-      },
-    ]
+      { index: true, element: <Homepage />, errorElement: <ErrorPage /> },
+      { path: "shop", element: <Shop />, errorElement: <ErrorPage /> },
+    ],
   },
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
