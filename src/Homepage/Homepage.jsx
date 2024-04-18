@@ -9,7 +9,7 @@ const Homepage = () => {
         you should buy something
       </p>
       <img src="src/assets/mocksTitlePicture.webp" alt="random image" />
-      <Link to="../shop">Go to the shop</Link>
+      <Link to="/">Go to the shop</Link>
     </div>
   );
 };
