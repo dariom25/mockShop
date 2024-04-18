@@ -2,6 +2,8 @@ import "./App.css";
 import Shop from "../Shop/Shop";
 import { Navbar } from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
+import { Outlet, Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 const useProductInformation = () => {
   const [productInformation, setProductInformation] = useState(null);
@@ -26,7 +28,6 @@ const useProductInformation = () => {
 };
 
 function App() {
-
   const { productInformation, error, loading } = useProductInformation();
 
   const [cart, setCart] = useState([]);
@@ -45,7 +46,7 @@ function App() {
       noOfItems += item.quantity;
     });
     return noOfItems;
-  }
+  };
 
   useEffect(() => {
     if (productInformation) {
@@ -59,9 +60,7 @@ function App() {
   const updateCart = (id, amount) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        return item.id === id
-          ? { ...item, quantity: amount }
-          : item;
+        return item.id === id ? { ...item, quantity: amount } : item;
       });
       return updatedCart;
     });
@@ -69,12 +68,24 @@ function App() {
 
   return (
     <div>
-      <Navbar numberOfItemsInCart={numberOfItemsInCart}/>
-      <Shop
-        productInformation={productInformation}
-        error={error}
-        loading={loading}
-        updateCart={updateCart}
+      <div className="navbar-container">
+        <h1>Mocks Schmock Shop</h1>
+        <div className="link-container">
+          <Link to="/">Homepage</Link>
+          <Link to="shop">Shop</Link>
+          <Cart numberOfItemsInCart={numberOfItemsInCart} />
+        </div>
+      </div>
+      <Outlet
+        context={[
+          productInformation,
+          error,
+          loading,
+          cart,
+          sumOfCart,
+          numberOfItemsInCart,
+          updateCart,
+        ]}
       />
     </div>
   );
