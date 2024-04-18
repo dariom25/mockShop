@@ -1,61 +1,9 @@
 import "./Shop.css";
-import { useEffect, useState } from "react";
 import Product from "../Product/Product.jsx";
 
-const useProductInformation = () => {
-  const [productInformation, setProductInformation] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products", { mode: "cors" })
-      .then((response) => {
-        if (response.status >= 400) {
-          throw new Error("server error");
-        }
-        return response.json();
-      })
-      .then((response) => {
-        setProductInformation(response);
-      })
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false));
-  }, []);
-  return { productInformation, error, loading };
-};
 
-const Shop = () => {
-  const [cart, setCart] = useState([]);
-
-  const { productInformation, error, loading } = useProductInformation();
-
-  const sumOfCart = () => {
-    let sum = 0;
-    cart.forEach((item) => {
-      sum += item.quantity * item.price;
-    });
-    return Number(sum.toFixed(2));
-  };
-
-  useEffect(() => {
-    if (productInformation) {
-      const updatedProducts = productInformation.map((item) => {
-        return { ...item, quantity: 0 };
-      });
-      setCart(updatedProducts);
-    }
-  }, [productInformation]); //check if sth changes when pages are switched
-
-  const updateCart = (id, amount) => {
-    setCart((prevCart) => {
-      const updatedCart = prevCart.map((item) => {
-        return item.id === id
-          ? { ...item, quantity: item.quantity + amount }
-          : item;
-      });
-      return updatedCart;
-    });
-  };
+const Shop = ({productInformation, error, loading}) => {
 
   if (error)
     return (
@@ -87,7 +35,6 @@ const Shop = () => {
   return (
     <div className="product-list-container">
       {productList}
-      {console.log(cart)}
     </div>
   );
 };
