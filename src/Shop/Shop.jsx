@@ -1,10 +1,7 @@
 import "./Shop.css";
 import Product from "../Product/Product.jsx";
 
-
-
-const Shop = ({productInformation, error, loading}) => {
-
+const Shop = ({ productInformation, error, loading, updateCart }) => {
   if (error)
     return (
       <p className="error">
@@ -32,11 +29,7 @@ const Shop = ({productInformation, error, loading}) => {
     );
   });
 
-  return (
-    <div className="product-list-container">
-      {productList}
-    </div>
-  );
+  return <div className="product-list-container">{productList}</div>;
 };
 
 export default Shop;
