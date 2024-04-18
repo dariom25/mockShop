@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import "./Navbar.css";
+import { useProductInformation } from "../Shop/Shop";
 
-const Navbar = () => {
+const Navbar = ({numberOfItemsInCart}) => {
   return (
     <div>
       <div className="navbar-container">
@@ -10,14 +11,11 @@ const Navbar = () => {
         <div className="link-container">
           <Link to="/homepage">Homepage</Link>
           <Link to="/shop">Shop</Link>
-          <Cart />
+          <Cart numberOfItemsInCart={numberOfItemsInCart} />
         </div>
-      </div>
-      <div className="outlet-container">
-        <Outlet />
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export {Navbar};
