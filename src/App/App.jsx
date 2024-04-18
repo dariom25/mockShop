@@ -39,6 +39,14 @@ function App() {
     return Number(sum.toFixed(2));
   };
 
+  const numberOfItemsInCart = () => {
+    let noOfItems = 0;
+    cart.forEach((item) => {
+      noOfItems += item.quantity;
+    });
+    return noOfItems;
+  }
+
   useEffect(() => {
     if (productInformation) {
       const updatedProducts = productInformation.map((item) => {
@@ -61,7 +69,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar numberOfItemsInCart={numberOfItemsInCart}/>
       <Shop
         productInformation={productInformation}
         error={error}
