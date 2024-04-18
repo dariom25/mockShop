@@ -1,7 +1,18 @@
 import "./Shop.css";
 import Product from "../Product/Product.jsx";
+import { useOutletContext } from "react-router-dom";
 
-const Shop = ({ productInformation, error, loading, updateCart }) => {
+const Shop = () => {
+  const [
+    productInformation,
+    error,
+    loading,
+    cart,
+    sumOfCart,
+    numberOfItemsInCart,
+    updateCart,
+  ] = useOutletContext();
+
   if (error)
     return (
       <p className="error">
