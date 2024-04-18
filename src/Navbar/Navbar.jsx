@@ -1,7 +1,6 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import "./Navbar.css";
-import { useProductInformation } from "../Shop/Shop";
 
 const Navbar = ({numberOfItemsInCart}) => {
   return (
