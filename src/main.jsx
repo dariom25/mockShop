@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import Checkout from "./Checkout/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Homepage />, errorElement: <ErrorPage /> },
       { path: "shop", element: <Shop />, errorElement: <ErrorPage /> },
+      { path: "checkout", element: <Checkout />, errorElement: <ErrorPage /> },
     ],
   },
 ]);
