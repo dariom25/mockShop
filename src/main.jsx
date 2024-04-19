@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Homepage />, errorElement: <ErrorPage /> },
-      { path: "shop", element: <Shop />, errorElement: <ErrorPage /> },
+      { path: "shop", element: <Shop />, errorElement: <ErrorPage /> }, //URL params einfügen
       { path: "checkout", element: <Checkout />, errorElement: <ErrorPage /> },
     ],
   },
