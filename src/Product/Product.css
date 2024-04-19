@@ -1,18 +1,16 @@
 .product-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-
     border: 3px solid lightgray;
     width: 400px;
-    height: 700px;
     border-radius: 20px;
     padding: 5px;
 }
 
 .product-container>img{
-    width: 200px;
+    height: 200px;
 }
 
 .add-to-cart-container{
@@ -48,10 +46,14 @@
 
 }
 
-.quantity-container>input:focus, .add-to-cart-container>button:hover{
+.quantity-container>input:focus{
     outline: none;
 }
 
+.add-to-cart-container>button:hover{
+    background-color: rgb(242, 252, 250);
+}
+
 .add-to-cart-container>button:active{
-    background-color: rgb(241, 231, 231);
+    background-color: rgb(231, 241, 239);
 }
