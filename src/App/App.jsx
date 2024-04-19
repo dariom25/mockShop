@@ -1,6 +1,5 @@
 import "./App.css";
 import Shop from "../Shop/Shop";
-import { Navbar } from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
@@ -73,7 +72,9 @@ function App() {
         <div className="link-container">
           <Link to="/">Homepage</Link>
           <Link to="shop">Shop</Link>
-          <Cart numberOfItemsInCart={numberOfItemsInCart} />
+          <Link to="checkout">
+            <Cart numberOfItemsInCart={numberOfItemsInCart} />
+          </Link>
         </div>
       </div>
       <Outlet
