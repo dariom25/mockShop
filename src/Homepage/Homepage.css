@@ -1,5 +1,14 @@
-.homepage-container{
-    display: flex;
-    justify-content: center;
-    background-color: green;
+.homepage-container {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-container > a > img {
+  border: lightgray solid 3px;
+  border-radius: 10px;
+  width: 800px;
+}
+
+.homepage-container > a > img:hover{
+    border-color: black;
 }
