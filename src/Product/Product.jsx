@@ -8,8 +8,9 @@ const Product = ({
   image,
   id,
   updateCart,
+  quantity
 }) => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(quantity);
 
   const handleUpdateCart = () => {
     updateCart(id, amount);
