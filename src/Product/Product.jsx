@@ -20,7 +20,6 @@ const Product = ({
     <div className="product-container">
       <img src={image} alt={title} />
       <h3>{title}</h3>
-      <p>{description}</p>
       <p>{price}</p>
       <div className="add-to-cart-container">
         <div className="quantity-container">
