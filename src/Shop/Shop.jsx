@@ -26,7 +26,7 @@ const Shop = () => {
       </p>
     );
 
-  const productList = productInformation.map((product) => {
+  const productList = cart.map((product) => {
     return (
       <Product
         title={product.title}
@@ -36,6 +36,7 @@ const Shop = () => {
         id={product.id}
         description={product.description}
         updateCart={updateCart}
+        quantity={product.quantity}
       />
     );
   });
