@@ -1,5 +1,4 @@
 import "./App.css";
-import Shop from "../Shop/Shop";
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
