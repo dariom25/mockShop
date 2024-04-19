@@ -13,9 +13,10 @@ const Checkout = () => {
     updateCart,
   ] = useOutletContext();
 
-  const selectedItems = cart.map((product) => {
+  const selectedItems = cart.forEach((product) => {
+    let items = [];
     if (product.quantity > 0) {
-      return (
+      items.push(
         <Product
           title={product.title}
           image={product.image}
@@ -28,13 +29,18 @@ const Checkout = () => {
         />
       );
     }
+    return items
   });
+
+  console.log(selectedItems);
+  if (selectedItems.length === 0) return <h2>No items in Cart. </h2>;
 
   return (
     <div className="checkout-container">
-      <div className="">
-        <p>{sumOfCart()}</p>
-        <p>{numberOfItemsInCart()}</p>
+      <div className="cost-information">
+        <p>Number of Items: {numberOfItemsInCart()}</p>
+        <p>Costs: {sumOfCart()} €</p>
+        <button>Checkout</button>
       </div>
       <div className="selected-items-container">{selectedItems}</div>
     </div>
