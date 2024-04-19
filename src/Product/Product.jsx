@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Product.css";
 
 const Product = ({
@@ -8,7 +9,7 @@ const Product = ({
   image,
   id,
   updateCart,
-  quantity
+  quantity,
 }) => {
   const [amount, setAmount] = useState(quantity);
 
@@ -18,9 +19,11 @@ const Product = ({
 
   return (
     <div className="product-container">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{price} €</p>
+      <Link to=":id">
+        <img src={image} alt={title} />
+        <h3>{title}</h3>
+        <p>{price} €</p>
+      </Link>
       <div className="add-to-cart-container">
         <div className="quantity-container">
           <label htmlFor="quantity">Quantity:</label>
