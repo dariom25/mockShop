@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <div className="navbar-container">
         <h1>Mocks Schmock Shop</h1>
         <div className="link-container">
@@ -87,7 +87,7 @@ function App() {
           updateCart,
         ]}
       />
-    </div>
+    </>
   );
 }
 
