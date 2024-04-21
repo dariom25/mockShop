@@ -37,10 +37,12 @@ const Checkout = () => {
   return (
     <div className="checkout-container">
       <div className="selected-items-container">{selectedItems}</div>
-      <div className="cost-information">
-        <p>Number of Items: {numberOfItemsInCart()}</p>
-        <p>Costs: {sumOfCart()} €</p>
-        <button>Checkout</button>
+      <div>
+        <div className="cost-information">
+          <p>Number of Items: {numberOfItemsInCart()}</p>
+          <p>Costs: {sumOfCart()} €</p>
+          <button>Checkout</button>
+        </div>
       </div>
     </div>
   );
