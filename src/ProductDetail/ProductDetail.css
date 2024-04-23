@@ -1,0 +1,19 @@
+.product-detail-layout-container{
+    justify-content: center;
+    display: flex;
+}
+
+.product-detail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 3px solid lightgray;
+    border-radius: 20px;
+    padding: 5px;
+    width: 700px;
+}
+
+.product-detail-container>img{
+    height: 400px;
+}
