@@ -19,7 +19,7 @@ const Product = ({
 
   return (
     <div className="product-container">
-      <Link to=":id">
+      <Link to={`/shop/${id}`}>
         <img src={image} alt={title} />
         <h3>{title}</h3>
         <p>{price} €</p>
