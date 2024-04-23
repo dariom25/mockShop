@@ -31,7 +31,6 @@ const Checkout = () => {
     return acc;
   }, []);
 
-  console.log(selectedItems);
   if (selectedItems.length === 0) return <h2>No items in Cart. </h2>;
 
   return (
