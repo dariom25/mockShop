@@ -5,7 +5,6 @@ import "./Product.css";
 const Product = ({
   title,
   price,
-  description,
   image,
   id,
   updateCart,
