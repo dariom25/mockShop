@@ -53,7 +53,7 @@ function App() {
       });
       setCart(updatedProducts);
     }
-  }, [productInformation]); //check if sth changes when pages are switched
+  }, [productInformation]);
 
   const updateCart = (id, amount) => {
     setCart((prevCart) => {
