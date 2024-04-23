@@ -7,6 +7,7 @@ import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import Checkout from "./Checkout/Checkout";
+import ProductDetail from "./ProductDetail/ProductDetail";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Homepage />, errorElement: <ErrorPage /> },
-      { path: "shop", element: <Shop />, errorElement: <ErrorPage /> }, //URL params einfügen
-      { path: "checkout", element: <Checkout />, errorElement: <ErrorPage /> },
+      { path: "/shop", element: <Shop />, errorElement: <ErrorPage /> },
+      { path: "/shop/:id", element: <ProductDetail />, errorElement: <ErrorPage /> },
+      { path: "/checkout", element: <Checkout />, errorElement: <ErrorPage /> },
     ],
   },
 ]);
