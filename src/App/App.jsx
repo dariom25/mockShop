@@ -2,7 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
-
+import { IoMenu } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
 
 const useProductInformation = () => {
   const [productInformation, setProductInformation] = useState(null);
@@ -82,6 +83,12 @@ function App() {
             </Link>
           </li>
         </ul>
+        <div className="navbar-close">
+          <IoCloseSharp/>
+        </div>
+      </div>
+      <div className="navbar-toggle">
+        <IoMenu/>
       </div>
       <div className="outlet-container">
         <Outlet
