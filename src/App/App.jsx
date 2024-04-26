@@ -76,13 +76,13 @@ function App() {
           <div className="navbar-menu">
             <ul className="navbar-list">
               <li>
-                <Link to="/">Homepage</Link>
+                <Link className="navbar-link" to="/">Homepage</Link>
               </li>
               <li>
-                <Link to="shop">Shop</Link>
+                <Link className="navbar-link" to="shop">Shop</Link>
               </li>
               <li>
-                <Link to="checkout">
+                <Link className="navbar-link" to="checkout">
                   <Cart numberOfItemsInCart={numberOfItemsInCart} />
                 </Link>
               </li>
