@@ -76,10 +76,14 @@ function App() {
           <div className="navbar-menu">
             <ul className="navbar-list">
               <li>
-                <Link className="navbar-link" to="/">Homepage</Link>
+                <Link className="navbar-link" to="/">
+                  Homepage
+                </Link>
               </li>
               <li>
-                <Link className="navbar-link" to="shop">Shop</Link>
+                <Link className="navbar-link" to="shop">
+                  Shop
+                </Link>
               </li>
               <li>
                 <Link className="navbar-link" to="checkout">
@@ -91,10 +95,10 @@ function App() {
               <IoCloseSharp />
             </div>
           </div>
+          <div className="navbar-toggle">
+            <IoMenu />
+          </div>
         </nav>
-        <div className="navbar-toggle">
-          <IoMenu />
-        </div>
       </header>
       <div className="outlet-container">
         <Outlet
