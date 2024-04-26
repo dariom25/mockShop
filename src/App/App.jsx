@@ -67,33 +67,35 @@ function App() {
   };
 
   return (
-    <header>
-      <nav className="navbar-container">
-        <h1>
-          <Link to="/">Mocks Schmock Shop</Link>
-        </h1>
-        <div className="navbar-menu">
-          <ul className="navbar-list">
-            <li>
-              <Link to="/">Homepage</Link>
-            </li>
-            <li>
-              <Link to="shop">Shop</Link>
-            </li>
-            <li>
-              <Link to="checkout">
-                <Cart numberOfItemsInCart={numberOfItemsInCart} />
-              </Link>
-            </li>
-          </ul>
-          <div className="navbar-close">
-            <IoCloseSharp />
+    <>
+      <header className="header">
+        <nav className="navbar-container">
+          <h1>
+            <Link to="/">Mocks Schmock Shop</Link>
+          </h1>
+          <div className="navbar-menu">
+            <ul className="navbar-list">
+              <li>
+                <Link to="/">Homepage</Link>
+              </li>
+              <li>
+                <Link to="shop">Shop</Link>
+              </li>
+              <li>
+                <Link to="checkout">
+                  <Cart numberOfItemsInCart={numberOfItemsInCart} />
+                </Link>
+              </li>
+            </ul>
+            <div className="navbar-close">
+              <IoCloseSharp />
+            </div>
           </div>
+        </nav>
+        <div className="navbar-toggle">
+          <IoMenu />
         </div>
-      </nav>
-      <div className="navbar-toggle">
-        <IoMenu />
-      </div>
+      </header>
       <div className="outlet-container">
         <Outlet
           context={[
@@ -107,7 +109,7 @@ function App() {
           ]}
         />
       </div>
-    </header>
+    </>
   );
 }
 
