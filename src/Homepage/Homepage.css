@@ -6,7 +6,7 @@
 .homepage-container > a > img {
   border: lightgray solid 3px;
   border-radius: 10px;
-  width: 800px;
+  max-width: 100%;
 }
 
 .homepage-container > a > img:hover{
