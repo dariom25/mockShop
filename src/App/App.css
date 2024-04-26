@@ -17,15 +17,20 @@ h1 {
   align-items: center;
   justify-content: space-around;
   width: 25%;
+  gap: 5px;
 }
 
-.link-container > a {
+li{
+  list-style: none;
+}
+
+.link-container > li > a {
   text-decoration: none;
   font-size: 24px;
   color: black;
 }
 
-.link-container > a:hover {
+.link-container > li > a:hover {
   text-decoration: underline black 2px;
 }
 
