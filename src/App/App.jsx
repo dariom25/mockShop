@@ -76,17 +76,19 @@ function App() {
           </Link>
         </div>
       </div>
-      <Outlet
-        context={[
-          productInformation,
-          error,
-          loading,
-          cart,
-          sumOfCart,
-          numberOfItemsInCart,
-          updateCart,
-        ]}
-      />
+      <div className="outlet-container">
+        <Outlet
+          context={[
+            productInformation,
+            error,
+            loading,
+            cart,
+            sumOfCart,
+            numberOfItemsInCart,
+            updateCart,
+          ]}
+        />
+      </div>
     </>
   );
 }
