@@ -68,27 +68,31 @@ function App() {
 
   return (
     <header>
-      <div className="navbar-container">
-        <h1>Mocks Schmock Shop</h1>
-        <ul className="link-container">
-          <li>
-            <Link to="/">Homepage</Link>
-          </li>
-          <li>
-            <Link to="shop">Shop</Link>
-          </li>
-          <li>
-            <Link to="checkout">
-              <Cart numberOfItemsInCart={numberOfItemsInCart} />
-            </Link>
-          </li>
-        </ul>
-        <div className="navbar-close">
-          <IoCloseSharp/>
+      <nav className="navbar-container">
+        <h1>
+          <Link to="/">Mocks Schmock Shop</Link>
+        </h1>
+        <div className="navbar-menu">
+          <ul className="navbar-list">
+            <li>
+              <Link to="/">Homepage</Link>
+            </li>
+            <li>
+              <Link to="shop">Shop</Link>
+            </li>
+            <li>
+              <Link to="checkout">
+                <Cart numberOfItemsInCart={numberOfItemsInCart} />
+              </Link>
+            </li>
+          </ul>
+          <div className="navbar-close">
+            <IoCloseSharp />
+          </div>
         </div>
-      </div>
+      </nav>
       <div className="navbar-toggle">
-        <IoMenu/>
+        <IoMenu />
       </div>
       <div className="outlet-container">
         <Outlet
