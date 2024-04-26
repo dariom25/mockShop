@@ -3,12 +3,19 @@
   justify-content: center;
 }
 
+.homepage-container > a{
+  display: flex;
+  justify-content: center;
+}
+
 .homepage-container > a > img {
   border: lightgray solid 3px;
   border-radius: 10px;
-  max-width: 100%;
+  max-width: 85%;
+  max-height: 85%;
 }
 
 .homepage-container > a > img:hover{
     border-color: black;
+
 }
