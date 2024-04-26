@@ -28,3 +28,7 @@ h1 {
 .link-container > a:hover {
   text-decoration: underline black 2px;
 }
+
+.outlet-container{
+  padding: 10px;
+}
