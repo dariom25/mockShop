@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
 
+
 const useProductInformation = () => {
   const [productInformation, setProductInformation] = useState(null);
   const [error, setError] = useState(null);
@@ -65,16 +66,22 @@ function App() {
   };
 
   return (
-    <>
+    <header>
       <div className="navbar-container">
         <h1>Mocks Schmock Shop</h1>
-        <div className="link-container">
-          <Link to="/">Homepage</Link>
-          <Link to="shop">Shop</Link>
-          <Link to="checkout">
-            <Cart numberOfItemsInCart={numberOfItemsInCart} />
-          </Link>
-        </div>
+        <ul className="link-container">
+          <li>
+            <Link to="/">Homepage</Link>
+          </li>
+          <li>
+            <Link to="shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="checkout">
+              <Cart numberOfItemsInCart={numberOfItemsInCart} />
+            </Link>
+          </li>
+        </ul>
       </div>
       <div className="outlet-container">
         <Outlet
@@ -89,7 +96,7 @@ function App() {
           ]}
         />
       </div>
-    </>
+    </header>
   );
 }
 
