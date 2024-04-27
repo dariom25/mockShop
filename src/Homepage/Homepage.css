@@ -9,13 +9,13 @@
 }
 
 .homepage-container > a > img {
-  border: lightgray solid 3px;
+  border: var(--border-color) solid 3px;
   border-radius: 10px;
   max-width: 85%;
   max-height: 85%;
 }
 
 .homepage-container > a > img:hover{
-    border-color: black;
+    border-color: var(--main-font);
 
 }
