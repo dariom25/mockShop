@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   width: 100%;
-  background-color: lightgray;
+  background-color: var(--header);
   top: 0;
 }
 
@@ -15,7 +15,7 @@
 
 h1 > a {
   text-decoration: none;
-  color: black;
+  color: var(--main-font);
   font-size: 48px;
   cursor: pointer;
 }
@@ -42,7 +42,7 @@ h1 > a {
 
 .navbar-link {
   text-decoration: none;
-  color: black;
+  color: var(--main-font);
   font-size: 28px;
 }
 
@@ -74,7 +74,8 @@ h1 > a {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: rgb(167, 163, 163);
+    background-color: var(--header);
+    box-shadow: -5px 0px 3px var(--main-font);
     height: 100%;
     padding: 50px 80px 50px 30px;
     transition: right 0.4s;
