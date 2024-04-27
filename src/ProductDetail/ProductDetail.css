@@ -17,3 +17,23 @@
 .product-detail-container>img{
     height: 400px;
 }
+
+@media screen and (max-width: 1000px) {
+    .product-detail-container>img{
+        height: 250px;
+    }
+
+    .product-detail-container{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .product-detail-container>img{
+        height: 150px;
+    }
+
+    .product-detail-container{
+        width: 290px;
+    }
+}
