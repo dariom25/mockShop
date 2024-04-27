@@ -1,39 +1,88 @@
-.navbar-container {
-  display: flex;
-  background-color: lightgray;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 10px;
+.header {
   position: sticky;
+  width: 100%;
+  background-color: lightgray;
   top: 0;
 }
 
-h1 {
-  font-size: 40px;
-}
-
-.link-container {
+.navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 25%;
-  gap: 5px;
+  justify-content: space-between;
+  margin: 16px;
+
 }
 
-li{
-  list-style: none;
-}
-
-.link-container > li > a {
+h1 > a {
   text-decoration: none;
-  font-size: 24px;
   color: black;
+  font-size: 48px;
+  cursor: pointer;
 }
 
-.link-container > li > a:hover {
-  text-decoration: underline black 2px;
+.navbar-toggle,
+.navbar-close {
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.outlet-container{
-  padding: 10px;
+.navbar-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  padding: 0px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+.cart-container>p{
+  margin: 0px;
+}
+
+.navbar-menu.show-menu {
+  right: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar-toggle,
+  .navbar-close {
+    display: none;
+  }
+
+  .navbar-container{
+    height: calc(60px + 16px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgb(167, 163, 163);
+    height: 100%;
+    padding: 50px 80px 50px 30px;
+    transition: right 0.4s;
+  }
+
+  .navbar-list{
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+  }
 }
