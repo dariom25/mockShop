@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border: 3px solid lightgray;
+    border: 3px solid var(--border-color);
     width: 400px;
     border-radius: 20px;
     padding: 5px;
@@ -11,7 +11,7 @@
 
 .product-container>a{
     text-decoration: none;
-    color: black;
+    color: var(--main-font);
 
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 .product-container:hover{
-    border-color: black;
+    border-color: var(--main-font);
 }
 
 .product-container>a>img{
@@ -34,7 +34,7 @@
 
 .add-to-cart-container>button{
     background-color: transparent;
-    border-color: lightgray lightgray lightgray transparent;
+    border-color: var(--border-color) var(--border-color) var(--border-color) transparent;
     border-style: solid;
     border-width: 3px 3px 3px 0px;
     border-radius: 0px 10px 10px 0px;
@@ -51,7 +51,7 @@
 
 .quantity-container>input{
     background-color: transparent;
-    border-color: lightgray lightgray lightgray lightgray;
+    border-color: var(--border-color);
     border-style: solid;
     border-width: 3px 0px 3px 3px;
     border-radius: 10px 0px 0px 10px;
