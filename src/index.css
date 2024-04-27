@@ -1,5 +1,9 @@
 :root{
     font-family: "Roboto", sans-serif, system-ui;
+    --main-font: #222222;
+    --background: #FFFFFF;
+    --header: #95A3B3;
+    --border-color: #4B4E6D;
 }
 
 body{
