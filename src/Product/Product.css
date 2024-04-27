@@ -71,3 +71,13 @@
 .add-to-cart-container>button:active{
     background-color: rgb(231, 241, 239);
 }
+
+@media screen and (max-width:500px) {
+    .product-container>a>img{
+        height: 100px;
+    }
+
+    .product-container{
+        width: 300px;
+    }
+}
