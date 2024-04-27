@@ -31,6 +31,17 @@ function App() {
   const { productInformation, error, loading } = useProductInformation();
 
   const [cart, setCart] = useState([]);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  const closeOnMobile = () => {
+    if (window.innerWidth <= 1000) {
+      setShowMenu(false);
+    }
+  };
 
   const sumOfCart = () => {
     let sum = 0;
@@ -73,29 +84,29 @@ function App() {
           <h1>
             <Link to="/">Mocks Schmock Shop</Link>
           </h1>
-          <div className="navbar-menu">
+          <div className={`navbar-menu ${showMenu ? "show-menu" : ""}`}>
             <ul className="navbar-list">
               <li>
-                <Link className="navbar-link" to="/">
+                <Link className="navbar-link" to="/" onClick={closeOnMobile}>
                   Homepage
                 </Link>
               </li>
               <li>
-                <Link className="navbar-link" to="shop">
+                <Link className="navbar-link" to="shop" onClick={closeOnMobile}>
                   Shop
                 </Link>
               </li>
               <li>
-                <Link className="navbar-link" to="checkout">
+                <Link className="navbar-link" to="checkout" onClick={closeOnMobile}>
                   <Cart numberOfItemsInCart={numberOfItemsInCart} />
                 </Link>
               </li>
             </ul>
-            <div className="navbar-close">
+            <div className="navbar-close" onClick={toggleMenu}>
               <IoCloseSharp />
             </div>
           </div>
-          <div className="navbar-toggle">
+          <div className="navbar-toggle" onClick={toggleMenu}>
             <IoMenu />
           </div>
         </nav>
