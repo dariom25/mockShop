@@ -5,7 +5,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <Link to="shop">
-        <img src="\assets\mocksTitlePicture.webpebp" alt="random image" />
+        <img src="/mocksTitlePicture.webp" alt="random image" />
       </Link>
     </div>
   );
