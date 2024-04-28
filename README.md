@@ -1,3 +1,3 @@
-In this project I will implement the homepage of an imaginary shop linking to a shopping cart and a checkout page. This project shall teach me some basics about the react-router and react testing.
+In this project I will implement the homepage of an imaginary shop, linking it to a shopping cart, a product page and a checkout page. 
 
-Live-Demo, when done:
+Live-Demo: https://662e82f0cd933bee500a3e40--mockschmockshop.netlify.app/
